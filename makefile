@@ -1,0 +1,3 @@
+build-sdk-go:
+	go get -v ./...
+	go build -o build/sdk/golang/bin/sdk build/sdk/golang/main.go
