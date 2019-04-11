@@ -1,3 +1,3 @@
 build-server:
 	go get -v ./...
-	go build -o server/bin/server server/main.go
+	go build -o server/.bin/server server/main.go
