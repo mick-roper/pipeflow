@@ -1,9 +1,19 @@
 package main
 
-import "github.com/op/go-logging"
+import (
+	"github.com/mick-roper/pipeflow/server/config"
+	"github.com/op/go-logging"
+)
 
 var log = logging.MustGetLogger("server")
 
 func main() {
-	log.Info("server starting...")
+	var loader config.Loader = config.NewEnvLoader()
+	config, err := loader.Load()
+
+	if err != nil {
+		log.Critical(err)
+	}
+
+	log.Infof("server starting on port %v...", config.Port)
 }

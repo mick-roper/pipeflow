@@ -2,7 +2,7 @@ package config
 
 // Config that the server needs
 type Config struct {
-	port string
+	Port string
 }
 
 // Loader loads the config
