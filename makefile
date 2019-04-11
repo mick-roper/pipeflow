@@ -1,3 +1,3 @@
-build-sdk-go:
+build-server:
 	go get -v ./...
-	go build -o build/sdk/golang/bin/sdk build/sdk/golang/main.go
+	go build -o server/bin/server server/main.go
