@@ -12,7 +12,7 @@ func main() {
 	config, err := loader.Load()
 
 	if err != nil {
-		log.Critical(err)
+		log.Panic(err)
 	}
 
 	log.Infof("server starting on port %v...", config.Port)
