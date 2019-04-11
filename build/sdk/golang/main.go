@@ -1,7 +1,9 @@
 package main
 
-import "log"
+import "github.com/op/go-logging"
+
+var log = logging.MustGetLogger("example")
 
 func main() {
-	log.Print("hello, world!")
+	log.Info("Hello, world!")
 }
